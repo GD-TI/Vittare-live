@@ -138,7 +138,11 @@
       </a>
     </div>
 
-    <div class="conf-footer">
+    <div style="margin-top:1.25rem;padding:.85rem 1rem;border-radius:var(--r-md);border:1px solid var(--brd-gold);background:rgba(207,174,107,.06);text-align:center;font-size:.84rem;color:var(--text-m)">
+        Redirecionando automaticamente em <strong style="color:var(--gold-300)" id="countdown-txt">3</strong> segundos…
+        <br/><a href="login.html?thanks=1" style="color:var(--gold-400);font-weight:600">Clique aqui se não for redirecionado</a>
+      </div>
+      <div class="conf-footer">
       <a href="index.html">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
         Voltar para o site
@@ -150,8 +154,17 @@
 <script>
   const t = localStorage.getItem('vt_theme') || 'dark';
   document.documentElement.dataset.theme = t;
+  // Auto-redirect to login thanks screen after 3 seconds
+  let sec = 3;
+  const el = document.getElementById('countdown-txt');
+  const iv = setInterval(() => {
+    sec--;
+    if (el) el.textContent = sec;
+    if (sec <= 0) { clearInterval(iv); window.location.href = 'login.html?thanks=1'; }
+  }, 1000);
 </script>
 
+<!-- WA polling moved to area-cliente.html -->
 <script>
   const KEY_WA_LINK   = 'vt_wa_link';
   const KEY_WA_STATUS = 'vt_wa_status';
