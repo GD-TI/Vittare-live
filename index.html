@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -23,24 +23,16 @@ body{background:var(--bg-1);color:var(--text-b);font-family:'DM Sans',sans-serif
 :root{
   --gold-100:#fdf3dc;--gold-200:#f5dfa0;--gold-300:#e8c96a;--gold-400:#cfae6b;
   --gold-500:#b8943f;--gold-600:#8a6c28;--gold-700:#5c4718;
-  --bg-0:#0e0f12;--bg-1:#14151a;--bg-2:#1a1c22;--bg-3:#22242c;--bg-4:#2a2d38;
-  --text-h:#f8f4ec;--text-b:rgba(248,244,236,.78);--text-m:rgba(248,244,236,.52);--text-s:rgba(248,244,236,.32);
-  --brd-gold:rgba(207,174,107,.22);--brd-sub:rgba(255,255,255,.07);
-  --sh-gold:0 20px 60px rgba(207,174,107,.22);--sh-card:0 12px 40px rgba(0,0,0,.45);--sh-glow:0 0 60px rgba(207,174,107,.15);
-  --surf-a:rgba(255,255,255,.03);--surf-b:rgba(255,255,255,.055);
-  --btn-text:#0e0f12;--input-bg:rgba(255,255,255,.05);--overlay:rgba(0,0,0,.75);
+  --bg-0:#faf8f4;--bg-1:#f3ede3;--bg-2:#ece4d6;--bg-3:#e2d8c8;--bg-4:#d6cab6;
+  --text-h:#1a1208;--text-b:rgba(26,18,8,.82);--text-m:rgba(26,18,8,.55);--text-s:rgba(26,18,8,.36);
+  --brd-gold:rgba(140,100,30,.22);--brd-sub:rgba(0,0,0,.08);
+  --sh-gold:0 20px 60px rgba(140,100,30,.18);--sh-card:0 8px 32px rgba(0,0,0,.1);--sh-glow:0 0 60px rgba(140,100,30,.12);
+  --surf-a:rgba(0,0,0,.03);--surf-b:rgba(0,0,0,.055);
+  --btn-text:#faf8f4;--input-bg:rgba(0,0,0,.05);--overlay:rgba(0,0,0,.6);
   --tr:all .22s cubic-bezier(.4,0,.2,1);
   --r-sm:.75rem;--r-md:1.25rem;--r-lg:1.75rem;--r-xl:2.25rem;--r-full:999px;
 }
-[data-theme="light"]{
-  --bg-0:#faf8f4;--bg-1:#f4f0e8;--bg-2:#ede8da;--bg-3:#e5dfc9;--bg-4:#d9d1b8;
-  --text-h:#1a1409;--text-b:rgba(26,20,9,.78);--text-m:rgba(26,20,9,.55);--text-s:rgba(26,20,9,.35);
-  --brd-gold:rgba(140,100,30,.28);--brd-sub:rgba(0,0,0,.08);
-  --sh-gold:0 20px 60px rgba(140,100,30,.18);--sh-card:0 8px 32px rgba(0,0,0,.1);--sh-glow:0 0 60px rgba(140,100,30,.12);
-  --surf-a:rgba(0,0,0,.03);--surf-b:rgba(0,0,0,.055);
-  --btn-text:#faf8f4;--input-bg:rgba(0,0,0,.04);--overlay:rgba(0,0,0,.6);
-  --gold-400:#a0782c;--gold-300:#c49840;--brd-gold:rgba(140,100,30,.25);
-}
+
 
 /* ── Typography ─────────────────────────────────────────────── */
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:var(--text-h);line-height:1.1;letter-spacing:-.01em}
@@ -59,21 +51,21 @@ section{padding:5.5rem 0}
 @media(min-width:1024px){.break-grid{grid-template-columns:1fr 1fr}}
 
 /* ── Logo switching ─────────────────────────────────────────── */
-.logo--dark{display:block}
-.logo--light{display:none}
-[data-theme="light"] .logo--dark{display:none}
-[data-theme="light"] .logo--light{display:block}
+.logo--dark{display:none}
+.logo--light{display:block}
+
+
 
 /* ── Theme Toggle ───────────────────────────────────────────── */
-.theme-toggle{display:flex;align-items:center;justify-content:center;width:44px;height:24px;border-radius:var(--r-full);border:1.5px solid var(--brd-gold);background:var(--bg-3);cursor:pointer;position:relative;transition:var(--tr);flex-shrink:0}
-.theme-toggle::after{content:'';position:absolute;left:3px;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,var(--gold-300),var(--gold-500));transition:transform .3s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 6px rgba(0,0,0,.3)}
-[data-theme="light"] .theme-toggle::after{transform:translateX(20px);background:linear-gradient(135deg,var(--gold-500),var(--gold-700))}
-.theme-toggle__icons{display:flex;align-items:center;justify-content:space-between;width:100%;padding:0 4px;position:relative;z-index:1;pointer-events:none}
-.theme-toggle__icons svg{width:9px;height:9px;color:var(--text-m)}
+
+
+
+
+
 
 /* ── Navbar ─────────────────────────────────────────────────── */
-.navbar{position:sticky;top:0;z-index:100;background:rgba(14,15,18,.88);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid var(--brd-gold);transition:background .35s ease}
-[data-theme="light"] .navbar{background:rgba(250,248,244,.9)}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.92);backdrop-filter:blur(20px) saturate(1.4);border-bottom:1px solid var(--brd-gold);transition:background .35s ease}
+
 .navbar__inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1.5rem;max-width:1180px;margin:0 auto}
 .navbar__logo-wrap{display:flex;align-items:center;gap:.9rem}
 .navbar__logo{height:40px;width:auto;filter:drop-shadow(0 2px 8px rgba(207,174,107,.45));transition:filter .3s ease}
@@ -82,7 +74,7 @@ section{padding:5.5rem 0}
 .navbar__links{display:flex;align-items:center;gap:1.5rem}
 .navbar__links a{font-size:.82rem;font-weight:500;color:var(--text-m);letter-spacing:.04em;transition:color .2s ease;white-space:nowrap}
 .navbar__links a:hover{color:var(--gold-300)}
-@media(max-width:900px){.navbar__links{display:none}.navbar__links.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(14,15,18,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd-gold);padding:1.2rem 1.5rem;gap:1rem;z-index:200}}
+@media(max-width:900px){.navbar__links{display:none}.navbar__links.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:rgba(250,248,244,.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--brd-gold);padding:1.2rem 1.5rem;gap:1rem;z-index:200}}
 .mob-menu-btn{display:none;background:none;border:none;color:var(--text-b);cursor:pointer;padding:.3rem}
 @media(max-width:900px){.mob-menu-btn{display:flex}}
 .navbar__progress-bar{height:2px;width:100%;background:var(--bg-4)}
@@ -112,10 +104,10 @@ section{padding:5.5rem 0}
 @media(min-width:1024px){.hero .container{grid-template-columns:1.2fr .8fr;align-items:center}}
 .hero__logo-hero{margin-bottom:2rem}
 .hero-logo--dark,.hero-logo--light{max-width:min(420px,90%);height:auto;filter:drop-shadow(0 4px 24px rgba(207,174,107,.35))}
-.hero-logo--dark{display:block}
-.hero-logo--light{display:none}
-[data-theme="light"] .hero-logo--dark{display:none}
-[data-theme="light"] .hero-logo--light{display:block}
+.hero-logo--dark{display:none}
+.hero-logo--light{display:block}
+
+
 .hero__badge{display:inline-flex;flex-wrap:wrap;align-items:center;gap:.6rem;padding:.45rem 1.1rem;border-radius:var(--r-full);border:1px solid rgba(207,174,107,.25);background:rgba(207,174,107,.07);margin-bottom:1.6rem;font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-300)}
 .hero__badge .dot{width:6px;height:6px;border-radius:50%;background:#e05c5c;box-shadow:0 0 0 3px rgba(224,92,92,.25);animation:pulse-dot 1.8s ease infinite}
 @keyframes pulse-dot{0%,100%{box-shadow:0 0 0 3px rgba(224,92,92,.25)}50%{box-shadow:0 0 0 6px rgba(224,92,92,.1)}}
@@ -422,12 +414,6 @@ section{padding:5.5rem 0}
         <a href="#oferta">Ingresso</a>
         <a href="#live">Live</a>
       </nav>
-      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-        <div class="theme-toggle__icons">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </div>
-      </button>
       <button class="btn btn--primary btn--sm" onclick="checkSalesAndOpen()">Garantir vaga <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
       <button class="mob-menu-btn" id="mobMenuBtn" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
     </div>
@@ -1075,7 +1061,7 @@ const KEY_STATUS = 'vt_live_status';
 const LIVE_DATE = new Date('2026-06-08T20:00:00-03:00');
 
 document.addEventListener('DOMContentLoaded', () => {
-  applyTheme(localStorage.getItem('vt_theme') || 'dark');
+  applyTheme('light');
   startCountdown();
   revealOnScroll();
   buildCarousel();
@@ -1084,11 +1070,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // THEME
-document.getElementById('themeToggle').addEventListener('click', () => {
-  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-  applyTheme(next); localStorage.setItem('vt_theme', next);
-});
-function applyTheme(t) { document.documentElement.dataset.theme = t; }
+
+function applyTheme(t) { document.documentElement.dataset.theme = 'light'; }
 
 // MOBILE MENU
 document.getElementById('mobMenuBtn').addEventListener('click', () => {
